@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/****************************************************************************
+**
+** Copyright (C) 2016 The Qt Company Ltd.
+** Contact: https://www.qt.io/licensing/
+**
+** This file is part of Qt Creator.
+**
+** Commercial License Usage
+** Licensees holding valid commercial Qt licenses may use this file in
+** accordance with the commercial license agreement provided with the
+** Software or, alternatively, in accordance with the terms contained in
+** a written agreement between you and The Qt Company. For licensing terms
+** and conditions see https://www.qt.io/terms-conditions. For further
+** information use the contact form at https://www.qt.io/contact-us.
+**
+** GNU General Public License Usage
+** Alternatively, this file may be used under the terms of the GNU
+** General Public License version 3 as published by the Free Software
+** Foundation with exceptions as appearing in the file LICENSE.GPL3-EXCEPT
+** included in the packaging of this file. Please review the following
+** information to ensure the GNU General Public License requirements will
+** be met: https://www.gnu.org/licenses/gpl-3.0.html.
+**
+****************************************************************************/
+
+Custom project wizard configuration example file. Note that by convention,
+the project file goes last.
+The "class" and "firstpage" attributes specify that it is a Qt 4 wizard and
+leave room for the Qt 4 target page.
+-->
+<wizard version="1" kind="project"
+        class="" firstpage="10"
+        id="F.ESP8266" category="G.Sming">
+    <icon>sming.png</icon>
+    <description>Creates an Sming project for esp8266.</description>
+    <displayname>Sming esp8266 Project</displayname>;
+    <displaycategory>ESP8266</displaycategory>
+    <files>
+        <file source="project.creator"  target="%ProjectName%.creator" openproject="true"/>
+        <file source="project.includes" target="%ProjectName%.includes"/>
+        <file source="project.files"    target="%ProjectName%.files"/>
+        <file source="project.config"    target="%ProjectName%.config"/>
+        <file source="project.creator.user"    target="%ProjectName%.creator.user"/>
+        
+        <file source="app/application.cpp"    target="app/application.cpp" openeditor="true"/>
+        <file source="include/user_config.h"    target="include/user_config.h"/>
+
+        <file source="Makefile"    target="Makefile"/>
+        <file source="Makefile-user.mk"    target="Makefile-user.mk"/>        
+    </files>
+    
+</wizard>
